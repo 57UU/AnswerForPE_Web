@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-L48oTW72RIV7NdpJsV022UVELkRix2b4v42BgCMN1ps=",
+      "hash": "sha256-SvOa0J3LZ8rHfJYgn5bJk+UWWmuVe5mU\/GXEo8HwJcU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-\/eRFzXpEYFzGeDEHX1lOQwel2j0NIA7ZyiGAiAQ32YQ=",
+      "hash": "sha256-9h8wVR8\/LDCREuBNfVMp2VkHA4UjjhTML4u0FKCtF5o=",
       "url": "_framework\/AnswerForPE_Web.dll"
     },
     {
@@ -221,5 +221,5 @@
       "url": "sample-data\/data_enhance.txt"
     }
   ],
-  "version": "XAgGldht"
+  "version": "WY2UBYoR"
 };
