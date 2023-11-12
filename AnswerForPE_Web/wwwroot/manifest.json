@@ -1,6 +1,6 @@
 {
-  "name": "AnswerForPE_Web",
-  "short_name": "AnswerForPE_Web",
+  "name": "体育理论助手",
+  "short_name": "体育助手",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
