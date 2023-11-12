@@ -1,0 +1,188 @@
+﻿@page "/"
+@inject HttpClient Http
+
+
+
+<PageTitle>体育理论</PageTitle>
+<style>
+    /* 去除默认样式 */
+    textarea {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: none;
+        background-color: transparent;
+        font-size: inherit;
+        width: 100%;
+        height:90vw;
+    }
+
+        textarea:focus {
+            outline: none;
+        }
+
+    /* 自定义样式 */
+    .mo-textarea {
+        display: inline-block;
+        resize: vertical;
+        padding: 5px 15px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        color: #606266;
+        background-color: #fff;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+        /* 提示文字 */
+        .mo-textarea::placeholder {
+            color: #c0c4cc;
+        }
+
+        /* 鼠标hover */
+        .mo-textarea:hover {
+            border-color: #c0c4cc;
+        }
+
+        /* 获得焦点 */
+        .mo-textarea:focus {
+            border-color: #3677f0;
+        }
+</style>
+
+@if (txt_raw == null)
+{
+    <h1>正在加载题库</h1>
+}
+else
+{
+    <h2>题目查询</h2>
+    <input @oninput="@((ChangeEventArgs __e) => InputValue = __e?.Value?.ToString())"
+
+
+    />
+    <textarea class="mo-textarea" disabled="disabled">
+        @anwser
+    </textarea>
+}
+
+
+@code{
+    private int anwser_num = 0;
+    private string anwser = "";
+    private string? _InputValue="";
+    private string? InputValue { get { return _InputValue; }  set {
+            change(value);
+        } }
+    private  void change(string value)
+    {
+        _InputValue = value;
+        anwser = "正在查询...";
+        //await Task.Delay(20);
+        if (_InputValue == "")
+        {
+            anwser = "输入内容以查询";
+            return;
+        }
+
+        System.Text.StringBuilder sb = new();
+        //sb.Clear();
+        int count = 0;
+        foreach (var item in dict)
+        {
+            if (item.Key.Contains(_InputValue))
+            {
+                sb.Append(item.Key);
+                //sb.Append('\n');
+                sb.Append(item.Value.Answer);
+                sb.Append("\n\n");
+                count++;
+            }
+        }
+        anwser_num = count;
+        anwser = sb.ToString();
+        if (anwser_num == 0)
+        {
+            anwser = "Can not find";
+        }
+        
+    }
+    Dictionary<string, Entry> dict = new Dictionary<string, Entry>();
+    public string? txt_raw;
+    protected override async Task OnInitializedAsync()
+    {
+        txt_raw = await Http.GetStringAsync("sample-data/data_enhance.txt");
+        var splited = txt_raw.Split(new string[] { "\r\n\r\n", }, StringSplitOptions.RemoveEmptyEntries);
+        foreach (var i in splited)
+        {
+            if (i == "\r\n")
+            {
+                continue;
+            }
+            int index = i.IndexOf("\r\n");
+            string question = i.Substring(0, index);
+            string answer = i.Substring(index, i.Length - index);
+            if (dict.ContainsKey(question))
+            {
+                if (dict[question].Prority < 1)
+                {
+                    Entry entry1 = new Entry(question, answer);
+                    if (entry1.Prority > 0)
+                    {
+                        dict[question] = entry1;
+                    }
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            else
+            {
+                Entry entry1 = new Entry(question, answer);
+                dict[question] = entry1;
+            }
+        }
+    }
+    class Entry
+    {
+        public string Question { get; set; }
+        public string Answer { get; set; }
+        public int Prority { get; private set; } = 0;
+        public Entry(string question, string answer)
+        {
+            Question = question;
+
+            int index = answer.IndexOf("标准答案");
+            if (index != -1)
+            {
+                int index2 = answer.IndexOf("你的答案");
+                if (index2 != -1)
+                {
+                    Answer = answer.Substring(0, index2);
+                    Answer += answer.Substring(index);
+                }
+                else
+                {
+                    Answer = answer;
+                }
+
+                Prority = 1;
+            }
+            else
+            {
+                Answer = answer;
+            }
+
+        }
+        public override int GetHashCode()
+        {
+            return Question.GetHashCode();
+        }
+    }
+}
