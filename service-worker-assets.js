@@ -209,7 +209,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-FhZbbo1SC19W4UhRww7Fy3B0o8jLb8Gk+kV++1LPKrg=",
+      "hash": "sha256-l8zZuIZKRzwb9veeGOzW4ZnE0lVzlJsBFv96Q+qW2Wo=",
       "url": "index.html"
     },
     {
@@ -221,5 +221,5 @@
       "url": "sample-data\/data_enhance.txt"
     }
   ],
-  "version": "LjihneXo"
+  "version": "19xuKx1U"
 };
