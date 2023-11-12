@@ -1,7 +1,7 @@
 {
   "name": "AnswerForPE_Web",
   "short_name": "AnswerForPE_Web",
-  "start_url": "./",
+  "start_url": "./AnswerForPE_Web/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#03173d",
