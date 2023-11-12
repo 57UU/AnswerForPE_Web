@@ -120,11 +120,12 @@ else
         var splited = txt_raw.Split(new string[] { "\r\n\r\n", }, StringSplitOptions.RemoveEmptyEntries);
         foreach (var i in splited)
         {
-            if (i == "\r\n")
+
+            int index = i.IndexOf("\r\n");
+            if (index == -1 || index==0)
             {
                 continue;
             }
-            int index = i.IndexOf("\r\n");
             string question = i.Substring(0, index);
             string answer = i.Substring(index, i.Length - index);
             if (dict.ContainsKey(question))
