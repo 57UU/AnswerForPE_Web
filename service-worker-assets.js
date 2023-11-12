@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-EE70Yw2QdgrQpCoWV7rzyp4rYzVdG1GALHlkAZeKOus=",
+      "hash": "sha256-UvJ5CgLZKwpJhGajfDR+o\/DGd1iQ+owpglRIW6eEkz8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-w43fEYwszyMcIoADhLiAIoS8grSeW1oXR48oNWf9TZM=",
+      "hash": "sha256-vyuqjo8OkY3ytDPIIZ+ceZ2Y05h3hauy52wHOENysVo=",
       "url": "_framework\/AnswerForPE_Web.dll"
     },
     {
@@ -217,7 +217,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-rh3dwSmVtAg5CbGMc4tCMeOUhIeXYrTBhkfuqy+sxT0=",
+      "hash": "sha256-o1nz3aEbrPXTYmP5MvpFxKP8e5+FrLNLD0smGQA0Wlc=",
       "url": "manifest.json"
     },
     {
@@ -225,5 +225,5 @@
       "url": "sample-data\/data_enhance.txt"
     }
   ],
-  "version": "Y5M2QOTo"
+  "version": "TRAk\/M0H"
 };
