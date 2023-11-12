@@ -126,7 +126,7 @@ else
             }
             int index = i.IndexOf("\r\n");
             string question = i.Substring(0, index);
-            string answer = i.Substring(index, i.Length - index);
+            string answer = i.Substring(index, i.Length - index-1);
             if (dict.ContainsKey(question))
             {
                 if (dict[question].Prority < 1)
