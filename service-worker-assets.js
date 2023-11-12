@@ -33,15 +33,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-SvOa0J3LZ8rHfJYgn5bJk+UWWmuVe5mU\/GXEo8HwJcU=",
+      "hash": "sha256-bqLTeWI3sU+D9cQ28sId4XaLVYeniK2nvvD4itrffzo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-9h8wVR8\/LDCREuBNfVMp2VkHA4UjjhTML4u0FKCtF5o=",
+      "hash": "sha256-lfR8XPRDSXUlbkkIjwNsJ7LVcPSv87P\/8jKCDz5VyOM=",
       "url": "_framework\/AnswerForPE_Web.dll"
     },
     {
-      "hash": "sha256-c+WTS0EvsJCasvSf21mwhU9kbZnmagq6lxIgFx13LzU=",
+      "hash": "sha256-hO6OAffSf+slnC2S26kk+gRB0zmpNi3dxg+ZqJUs5kY=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -221,5 +221,5 @@
       "url": "sample-data\/data_enhance.txt"
     }
   ],
-  "version": "WY2UBYoR"
+  "version": "vPAN8How"
 };
