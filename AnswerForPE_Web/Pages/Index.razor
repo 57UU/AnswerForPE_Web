@@ -3,7 +3,7 @@
 
 
 
-<PageTitle>体育理论</PageTitle>
+<PageTitle>体育理论助手</PageTitle>
 <style>
     /* 去除默认样式 */
     textarea {
@@ -57,7 +57,7 @@
 
 @if (txt_raw == null)
 {
-    <h1>正在加载题库</h1>
+    <h1>正在加载题库......</h1>
 }
 else
 {
@@ -75,7 +75,7 @@ else
 
 @code{
     private int anwser_num = 0;
-    private string anwser = "";
+    private string anwser = "输入内容以查询";
     private string? _InputValue="";
     private string? InputValue { get { return _InputValue; }  set {
             change(value);
