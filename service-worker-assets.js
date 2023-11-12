@@ -209,7 +209,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-szP19qCZDDF4DUsVmXNEHEg03e1GtDRf\/Qpo\/p+dEfk=",
+      "hash": "sha256-FhZbbo1SC19W4UhRww7Fy3B0o8jLb8Gk+kV++1LPKrg=",
       "url": "index.html"
     },
     {
@@ -221,5 +221,5 @@
       "url": "sample-data\/data_enhance.txt"
     }
   ],
-  "version": "uD0QKGqn"
+  "version": "XAgGldht"
 };
