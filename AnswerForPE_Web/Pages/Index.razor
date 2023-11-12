@@ -111,19 +111,23 @@ else
         {
             anwser = "Can not find";
         }
-        
+
     }
     Dictionary<string, Entry> dict = new Dictionary<string, Entry>();
     public string? txt_raw;
     protected override async Task OnInitializedAsync()
     {
         txt_raw = await Http.GetStringAsync("sample-data/data_enhance.txt");
-Console.WriteLine(txt_raw);
-        var splited = txt_raw.Split(new string[] { "\r\n\r\n", }, StringSplitOptions.RemoveEmptyEntries);
+        Console.WriteLine(txt_raw);
+        var splited = txt_raw.Split(new string[] { "\r\n\r\n","\n\n" }, StringSplitOptions.RemoveEmptyEntries);
         foreach (var i in splited)
         {
 
             int index = i.IndexOf("\r\n");
+            if (index == -1)
+            {
+                index = i.IndexOf("\n");
+            }
             if (index == -1 || index==0)
             {
                 continue;
