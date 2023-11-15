@@ -61,9 +61,13 @@
         <strong>注意：</strong> 若长时间无法加载请尝试刷新，或者强制刷新(Shift+F5)
     </div>
 
-    <div class="row">
-        <div class="col"><h1>正在加载题库......</h1></div>
-        <div class="col"><div class=" spinner-border text-primary"></div></div>
+    <div class="display: flex;">
+        <div style="display: inline-block;">
+            <h1 >正在加载题库......</h1>
+        </div>
+        <div style="display: inline-block;">
+            <div  class=" spinner-border text-primary"></div>
+        </div>
     </div>
 
 
@@ -77,14 +81,11 @@ else
         <strong>成功!</strong> 题库加载完成，共检索到 @dict.Count 个条目
     </div>
     <div class="alert alert-info">    @anwser_num_str </div>
-
-<div class="row">
-        <h2 class="col">题目查询→</h2>
-        <div class="col-8">
-            <input type="text" class="form-control" placeholder="Input Key Words Here"
-            @oninput="@((ChangeEventArgs __e) => InputValue = __e?.Value?.ToString())" />
-        </div>
-
+    
+<div class="input-group mb-3">
+    <span class="input-group-text">在此输入</span>
+        <input type="text" class="form-control" placeholder="Input Key Words Here"
+        @oninput="@((ChangeEventArgs __e) => InputValue = __e?.Value?.ToString())" />
 </div>
 <br/>
 
