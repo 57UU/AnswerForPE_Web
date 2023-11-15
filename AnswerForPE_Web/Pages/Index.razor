@@ -129,7 +129,7 @@ else
         int count = 0;
         foreach (var item in dict)
         {
-            if (item.Key.Contains(_InputValue))
+            if (item.Key.Contains(_InputValue) || item.Value.Answer.Contains(_InputValue))
             {
                 sb.Append(item.Key);
                 //sb.Append('\n');
