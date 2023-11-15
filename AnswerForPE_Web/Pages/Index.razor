@@ -57,16 +57,37 @@
 
 @if (txt_raw == null)
 {
-    <h1>正在加载题库......</h1>
+    <div class="alert alert-info">
+        <strong>注意：</strong> 若长时间无法加载请尝试刷新，或者强制刷新(Shift+F5)
+    </div>
+
+    <div class="row">
+        <div class="col"><h1>正在加载题库......</h1></div>
+        <div class="col"><div class=" spinner-border text-primary"></div></div>
+    </div>
+
+
+    
+    
+
 }
 else
 {
-<h2>题库加载完成，共检索到 @dict.Count 个条目</h2>
-    <h2>题目查询</h2>
-    <input @oninput="@((ChangeEventArgs __e) => InputValue = __e?.Value?.ToString())"
+    <div class="alert alert-success">
+        <strong>成功!</strong> 题库加载完成，共检索到 @dict.Count 个条目
+    </div>
+    <div class="alert alert-info">    @anwser_num_str </div>
 
+<div class="row">
+        <h2 class="col">题目查询→</h2>
+        <div class="col-8">
+            <input type="text" class="form-control" placeholder="Input Key Words Here"
+            @oninput="@((ChangeEventArgs __e) => InputValue = __e?.Value?.ToString())" />
+        </div>
 
-    />
+</div>
+<br/>
+
     <textarea class="mo-textarea" disabled="disabled">
         @anwser
     </textarea>
@@ -74,6 +95,17 @@ else
 
 
 @code{
+    private string anwser_num_str
+    {
+        get
+        {
+            if (anwser_num == 0)
+            {
+                return "输入关键字以查询吧";
+            }
+            return $"共找到{anwser_num}个答案";
+        }
+    }
     private int anwser_num = 0;
     private string anwser = "输入内容以查询";
     private string? _InputValue="";
@@ -109,7 +141,7 @@ else
         anwser = sb.ToString();
         if (anwser_num == 0)
         {
-            anwser = "Can not find";
+            anwser = "emmmm,找不到";
         }
 
     }
