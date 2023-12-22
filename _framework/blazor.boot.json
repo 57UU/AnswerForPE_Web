@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AnswerForPE_Web",
   "resources": {
-    "hash": "sha256-HtzH6qwLX2uV86ansiBwQxWJqE3jvKPOGiamdJHIGWw=",
+    "hash": "sha256-Amn5skOHQB595JeTH0Ic8xQeoqQ+2BaZgxf+QsH8JOM=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "AnswerForPE_Web.wasm": "sha256-giYQg1JIrtfjLMw9ERGgejHZuCGgDWYlTWSGdNSQXow=",
+      "AnswerForPE_Web.wasm": "sha256-bruZMA/VfEprpseUT3122k2l8Z23Vzs91oKoBXb1ygc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-QmNUs0eSTZEn9DrsnTJlTGSmlnNZWBEbsLxeHImKj54=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-RNAqR0ff+baVaIhI+uEcLo9eT+pxGnBEvkCzqD+3roM=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Ws5szf6fWPAXna+XyWsAhavx+WDFcA/91DQ7iPRPCMs=",
